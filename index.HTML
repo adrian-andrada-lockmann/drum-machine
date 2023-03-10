@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drum Machine by ElR4T0n</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+    <div class="container" id="drum-machine">
+    <h1 class="text-center">Drum Machine by ElR4T0n</h1>
+        <div id="display" class="border border-success p-2 text-center">
+            <p id="keyPressed"><!-- --></p>
+            </div>
+
+        <button class="drum-pad" id="drum-0" onclick="play('Q')">
+            Q
+        <audio class="clip" id="Q" src="./samples/Heater-1.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-1" onclick="play('W')">
+            W
+        <audio class="clip" id="W" src="./samples/Heater-2.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-2" onclick="play('E')">
+            E
+        <audio class="clip" id="E" src="./samples/Heater-3.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-3" onclick="play('A')">
+            A
+        <audio class="clip" id="A" src="./samples/Cev_H2.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-4" onclick="play('S')">
+            S
+        <audio class="clip" id="S" src="./samples/Dsc_Oh.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-5" onclick="play('D')">
+            D
+        <audio class="clip" id="D" src="./samples/Heater-4_1.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-6" onclick="play('Z')">
+            Z
+        <audio class="clip" id="Z" src="./samples/RP4_KICK_1.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-7" onclick="play('X')">
+            X
+        <audio class="clip" id="X" src="./samples/Kick_n_Hat.mp3"></audio>
+        </button>
+        <button class="drum-pad" id="drum-8" onclick="play('C')">
+            C
+        <audio class="clip" id="C" src="./samples/Heater-6.mp3"></audio>
+        </button>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        function play(str) {
+            
+            let string = arguments[0]
+            document.getElementById("display").innerText = string
+
+            let audio = document.getElementById(str);
+            audio.currentTime = 0;
+            audio.play();
+        }
+        
+        document.addEventListener("keydown", function(event) {
+  if (event.key === "q" || event.key === "Q") {
+    document.getElementById("drum-0").click();
+    
+  } else if (event.key === "w" || event.key === "W") {
+    document.getElementById("drum-1").click();
+    
+  }else if (event.key === "e" || event.key === "E") {
+    document.getElementById("drum-2").click();
+    
+  }else if (event.key === "a" || event.key === "A") {
+    document.getElementById("drum-3").click();
+    
+  }else if (event.key === "s" || event.key === "S") {
+    document.getElementById("drum-4").click();
+    
+  }else if (event.key === "d" || event.key === "D") {
+    document.getElementById("drum-5").click();
+    
+  }else if (event.key === "z" || event.key === "Z") {
+    document.getElementById("drum-6").click();
+   
+  }else if (event.key === "x" || event.key === "X") {
+    document.getElementById("drum-7").click();
+   
+  }else if (event.key === "c" || event.key === "C") {
+    document.getElementById("drum-8").click();
+    
+}});
+            </script>
+</body>
+
+</html>

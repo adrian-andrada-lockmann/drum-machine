@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+  }
+  button {
+    background-color: #3c843e;
+    border-radius: 30px;
+    color: white;
+    padding: 0;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    height:100px;
+ width:100px;
+ 
+  ;}
+
+  button:hover {
+background-color: #4CAF50; /* Green */
+color: white;
+}
+#title{
+color: #3c843e;
+}
+
+#subtitle{
+color:#4CAF50;
+margin: 0 auto;
+font-size: 15;
+}
